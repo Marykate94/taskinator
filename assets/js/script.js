@@ -139,14 +139,6 @@ var completeEditTask = function (taskName, taskType, taskId) {
       tasks[i].name = taskName;
       tasks[i].type = taskType;
     }
-  };
-
-  // loop through tasks array and task object with new content
-  for (var i = 0; i < tasks.length; i++) {
-    if (tasks[i].id === parseInt(taskId)) {
-      tasks[i].name = taskName;
-      tasks[i].type = taskType;
-    }
   }
 
   alert("Task Updated!");
@@ -172,14 +164,7 @@ var taskButtonHandler = function (event) {
     var taskId = targetEl.getAttribute("data-task-id");
     deleteTask(taskId);
   }
-  //update task's in tasks array
-  for (var i = 0; i < tasks.length; i++) {
-    if (tasks[i].id === parseInt(taskId)) {
-      tasks[i].status = statusValue;
-    }
-  }
 };
-// add
 
 var taskStatusChangeHandler = function (event) {
   console.log(event.target.value);
