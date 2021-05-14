@@ -270,6 +270,9 @@ var loadTasks = function() {
   }
 };
 
+var saveTasks = function() {
+  localStorage.setItem("tasks",tasks);
+}
 // Create a new task
 formEl.addEventListener("submit", taskFormHandler);
 
